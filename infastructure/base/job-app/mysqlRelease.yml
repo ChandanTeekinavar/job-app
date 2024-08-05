@@ -16,6 +16,7 @@ spec:
   targetNamespace: demo-flux
   interval: 1h # this is for drifting of the helm created resources
   values:
+    fullnameOverride: my-mysql
     mysqlRootPassword: "12345678"
     mysqlUser: test 
     mysqlPassword: test123
