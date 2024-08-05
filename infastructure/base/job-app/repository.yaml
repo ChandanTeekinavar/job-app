@@ -1,0 +1,9 @@
+# flux HelmRepository for installing job-app
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: polymorphic-app
+  namespace: demo-flux
+spec:
+  url: https://improwised.github.io/charts/
+  interval: 10m
