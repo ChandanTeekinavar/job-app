@@ -6,7 +6,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: wso2/mysql
+      chart: mysql
       version: 1.6.9
       interval: 5h # this is for checking of a new chart
       sourceRef:
