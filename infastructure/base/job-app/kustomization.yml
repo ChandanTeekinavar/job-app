@@ -2,4 +2,7 @@
 
 resources:
   - "namespace.yml"
+  - "mysqlRepository.yml"
   - "repository.yaml"
+  - "mysqlRelease.yml" 
+  - "release.yaml"

@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: mysql-repo
+  namespace: demo-flux
+spec:
+  url: https://helm.wso2.com
+  interval: 10m
