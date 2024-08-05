@@ -1,0 +1,18 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: job-app
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: job-app
+  policy:
+    regex:
+      pattern: "ci-.*-(\\d+)" # Regex to capture the epoch timestamp part
+      extract: "tag"  # Extract the entire tag for use in updates
+
+      
+# Optionally you could include a semver policy if applicable
+    # semver:
+    #   range: ">=0.0.0" # Adjust if you're using semver tags as well
+

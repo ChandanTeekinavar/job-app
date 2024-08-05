@@ -6,3 +6,6 @@ resources:
   - "repository.yaml"
   - "mysqlRelease.yml" 
   - "release.yaml"
+  - "imageRepository.yml"
+  - "imagepolicy.yml"
+  - "imageupdateautomation.yml"
