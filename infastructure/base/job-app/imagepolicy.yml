@@ -6,16 +6,36 @@ metadata:
 spec:
   imageRepositoryRef:
     name: job-app
-  policy:
+  filterTags:
+    pattern: "ci-.*-(\\d+)"
+    extract: $1   
   policy:
     numerical:
-      order: asc
-      strategy: highest
-      range: "*"
-      extract: $(tag | split '-' | last)
-      # extract: $(tag | regex '^.*-(\\d+)$' | groups[1])
+      order: desc
+      # range: "*"   # Fetch images across all available tags
+      # extract: $(tag | split('-') | last)  # Extract the last part of the tag after splitting by '-'
+
+
+      # strategy: highest
+      # range: "*"
       # extract: $(tag | split('-') | index 2)
-  #   regex:
-  #     pattern: "ci-.*-(\\d+)" # Regex to capture the epoch timestamp part
-  #     extract: "tag"  # Extract the entire tag for use in updates
+
+
+
+    # rules:
+    #   - regex:
+    #       pattern: "ci-.*-(\\d+)"  # Regex to capture the epoch timestamp part
+    #       extract: "tag"  # Extract the entire tag for use in updates
+
+
+    # numerical:
+    #   order: asc
+    #   strategy: highest
+    #   range: "*"
+    #   extract: $(tag | split '-' | last)
+
+    #   extract: $(tag | regex '^.*-(\\d+)$' | groups[1])
+
+    #   extract: $(tag | split('-') | index 2)
+
 
