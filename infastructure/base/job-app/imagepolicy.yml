@@ -7,18 +7,15 @@ spec:
   imageRepositoryRef:
     name: job-app
   policy:
-    semver:
-      range: ">=0" # Allow any epoch timestamp
-    filterTags:
-      pattern: '^ci-[a-f0-9]{7}-(\\d+)$' # Capture the epoch timestamp
-      extract: '$1' # Extract the epoch timestamp
-  # policy:
+  policy:
+    numerical:
+      order: asc
+      strategy: highest
+      range: "*"
+      extract: $(tag | split '-' | last)
+      # extract: $(tag | regex '^.*-(\\d+)$' | groups[1])
+      # extract: $(tag | split('-') | index 2)
   #   regex:
   #     pattern: "ci-.*-(\\d+)" # Regex to capture the epoch timestamp part
   #     extract: "tag"  # Extract the entire tag for use in updates
-
-
-# Optionally you could include a semver policy if applicable
-    # semver:
-    #   range: ">=0.0.0" # Adjust if you're using semver tags as well
 
