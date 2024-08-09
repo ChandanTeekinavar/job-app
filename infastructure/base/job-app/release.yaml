@@ -24,9 +24,9 @@ spec:
     image:
       repository: chandanteekinavar/docker-exercise-app
       # tag: "ci-11f6ef4-1722422386"
-      # tag:  # {"$imagepolicy": "flux-system:job-app"}
-      imagePolicy:
-        fluxSystem: job-app
+      tag:  # {"$imagepolicy": "flux-system:job-app"}
+      # imagePolicy:
+      #   fluxSystem: job-app
       pullPolicy: IfNotPresent
 
     env:
