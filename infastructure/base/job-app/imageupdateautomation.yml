@@ -16,9 +16,14 @@ spec:
       author:
         email: fluxcdbot@users.noreply.github.com
         name: fluxcdbot
-      messageTemplate: "{{range .updatedImages}}{{println .}}{{end}}"
+      # messageTemplate: "{{range .updatedImages}}{{println .}}{{end}}"
+      messageTemplate: |
+        {{- range .updatedImages -}}
+        {{ . }}
+        {{- end -}}      
     push:
       branch: main
   update:
     path: ./infastructure/base/job-app/release.yaml
     strategy: Setters
+    updatedImages: ["{{ .repository }}:{{ .tag }}"]
