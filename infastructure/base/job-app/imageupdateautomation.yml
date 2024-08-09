@@ -16,11 +16,13 @@ spec:
       author:
         email: fluxcdbot@users.noreply.github.com
         name: fluxcdbot
+      messageTemplate: | 
+        Perform automatic image update
       # messageTemplate: "{{range .updatedImages}}{{println .}}{{end}}"
-      messageTemplate: |
-        {{- range .updatedImages -}}
-        {{ . }}
-        {{- end -}}      
+      # messageTemplate: |
+      #   {{- range .updatedImages -}}
+      #   {{ . }}
+      #   {{- end -}}      
     push:
       branch: main
   update:
