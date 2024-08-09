@@ -22,9 +22,9 @@ spec:
     prefixWithReleaseName:
       enabled: true
     image:
-      repository: chandanteekinavar/docker-exercise-app
+      repository: chandanteekinavar/docker-exercise-app:ci-be375787-20240729102411 # {"$imagepolicy": "flux-system:job-app"}
       # tag: "ci-11f6ef4-1722422386"
-      tag: {"$imagepolicy": "flux-system:job-app"}
+      # tag:  # {"$imagepolicy": "flux-system:job-app"}
       # imagePolicy:
       #   fluxSystem: job-app
       pullPolicy: IfNotPresent
