@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: polymorphic
-        namespace: flux-system
+        namespace: snipeit
   interval: 1m0s
   values:
     services:
