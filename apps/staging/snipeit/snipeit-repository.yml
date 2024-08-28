@@ -1,0 +1,9 @@
+# flux HelmRepository for installing snipeit
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: polymorphic-app
+  namespace: snipeit
+spec:
+  url: https://improwised.github.io/charts/
+  interval: 1m0s

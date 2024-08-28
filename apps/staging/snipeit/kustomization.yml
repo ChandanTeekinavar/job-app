@@ -1,2 +1,4 @@
 resources:
-  - "namespace.yml"
+  - "snipeit-namespace.yml"
+  - "snipeit-repository.yml"
+  # - "snipeit-release.yml"
