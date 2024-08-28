@@ -1,0 +1,5 @@
+# create a namespace for job-app
+apiVersion: v1
+kind: Namespace
+metadata:
+  name:  snipeit
