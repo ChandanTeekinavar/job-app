@@ -1,4 +1,6 @@
 resources:
   - "snipeit-namespace.yml"
   - "snipeit-repository.yml"
-  # - "snipeit-release.yml"
+  - "mysql-pvc.yml"
+  - "snipeit-pvc.yml"
+  - "snipeit-release.yml"
