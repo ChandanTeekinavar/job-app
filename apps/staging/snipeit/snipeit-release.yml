@@ -11,8 +11,8 @@ spec:
       version: 1.2.8
       sourceRef:
         kind: HelmRepository
-        name: polymorphic
-        namespace: snipeit
+        name: polymorphic-app #Edited the name from polymorphic to polymorphic-app
+        namespace: snipeit #Edited the namespace from flux-system to snipeit
   interval: 1m0s
   values:
     services:
