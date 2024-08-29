@@ -113,15 +113,15 @@ spec:
           - port: 80
             targetPort: snipeit
             name:  snipeit
-        ingress:
-          enabled: true
-          className: "nginx"
-          hosts:
-            - host: snipeit.com # give your own
-              paths:
-              - path: /
-                pathType: Prefix
-                servicePort: 80
+        # ingress:
+        #   enabled: true
+        #   className: "nginx"
+        #   hosts:
+        #     - host: snipeit.com # give your own
+        #       paths:
+        #       - path: /
+        #         pathType: Prefix
+        #         servicePort: 80
         ports:
           - name: snipeit
             containerPort: 80
