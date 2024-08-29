@@ -60,6 +60,8 @@ spec:
         healthcheck:
           enabled: false
         env:
+          - name: APP_DEBUG # added APP_DEBUG env to debug
+            value: "true" 
           - name: MYSQL_PORT_3306_TCP_ADDR
             value: "snipeit-mariadb-svc"
           - name: MYSQL_PORT_3306_TCP_PORT
