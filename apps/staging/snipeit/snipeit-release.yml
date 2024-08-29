@@ -66,8 +66,8 @@ spec:
             value: "snipeit-mariadb-svc"
           - name: MYSQL_PORT_3306_TCP_PORT
             value: "3306"
-          - name: APP_URL
-            value: "http://snipeit.com" # give your own URL
+          # - name: APP_URL
+          #   value: "http://snipeit.com" # give your own URL
           - name: APP_KEY
             value: "base64:ooV4cyqX7rqCpQj9NhTDCScE2MjqxYx1qkRj2HfdnK8="
           - name: MYSQL_DATABASE
@@ -113,15 +113,15 @@ spec:
           - port: 80
             targetPort: snipeit
             name:  snipeit
-        # ingress:
-        #   enabled: true
-        #   className: "nginx"
-        #   hosts:
-        #     - host: snipeit.com # give your own
-        #       paths:
-        #       - path: /
-        #         pathType: Prefix
-        #         servicePort: 80
+        ingress:
+          enabled: false
+          className: "nginx"
+          hosts:
+            - host: snipeit.com # give your own
+              paths:
+              - path: /
+                pathType: Prefix
+                servicePort: 80
         ports:
           - name: snipeit
             containerPort: 80
