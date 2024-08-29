@@ -65,7 +65,7 @@ spec:
           - name: MYSQL_PORT_3306_TCP_PORT
             value: "3306"
           - name: APP_URL
-            value: "http://10.43.50.163/" # give your own URL
+            value: "https://www.snipeit.com/" # give your own URL
           - name: APP_KEY
             value: "base64:ooV4cyqX7rqCpQj9NhTDCScE2MjqxYx1qkRj2HfdnK8="
           - name: MYSQL_DATABASE
@@ -115,7 +115,7 @@ spec:
           enabled: true
           className: "nginx"
           hosts:
-            - host: job-app.com # give your own
+            - host: www.snipeit.com # give your own
               paths:
               - path: /
                 pathType: Prefix
