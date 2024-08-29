@@ -112,7 +112,7 @@ spec:
             targetPort: snipeit
             name:  snipeit
         ingress:
-          enabled: false
+          enabled: true
           className: "nginx"
           hosts:
             - host: imp-snipeit.com # give your own
@@ -120,6 +120,7 @@ spec:
               - path: /
                 pathType: Prefix
                 servicePort: 80
+                serviceName: snipeit #added
         ports:
           - name: snipeit
             containerPort: 80
