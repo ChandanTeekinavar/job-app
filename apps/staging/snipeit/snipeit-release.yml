@@ -79,7 +79,7 @@ spec:
           - name: APP_ENV
             value: "production"
           - name: APP_DEBUG
-            value: "true" #Set to true to check the logs
+            value: "false" #Set to true to check the logs
           - name: MAIL_DRIVER
             value: "log"
           # - name: MAIL_PORT_587_TCP_ADDR
