@@ -73,7 +73,7 @@ spec:
           - name: MYSQL_USER
             value: "snipeit"
           - name: MYSQL_PASSWORD
-            value: "987654321" # set your own password
+            value: "987654321" # set your own password  # password is edited to 98765432100 from 987654321 to get an error and get alerts in the masttermost
           - name: TZ
             value: "Asia/kolkata"
           - name: APP_ENV
