@@ -19,8 +19,8 @@ spec:
       - name: mariadb
         type: StatefulSet
         image: 
-          # repository: mariadb #commented to get an error and get alerts in the mattermost
-          repository: wqwjdoiqj
+          repository: mariadb #commented to get an error and get alerts in the mattermost
+          # repository: wqwjdoiqj
           tag: 10.6
         # command: ["mysqld", "--innodb-file-per-table=1", "--lower-case-table-names=0", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_c"]
         healthcheck:
