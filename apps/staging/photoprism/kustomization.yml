@@ -1,0 +1,10 @@
+resources:
+  - "_namespace.yml"
+  - "polymorphic-helmrepo.yaml"
+  - "bitnami-helmrepository.yaml"
+  - "oauth2-proxy-helmrepo.yaml"
+  - "photoprism-db-secret.yaml"
+  - "photoprism-mariadb.yaml"
+  - "photoprism-helmrelease.yaml"
+  - "oauth2-proxy-helmrelease.yaml"
+  - "resilio-sync-helmrelease.yaml"
